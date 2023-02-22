@@ -1,13 +1,29 @@
+'use client';
+
 import Image from 'next/image'
 import { Inter } from '@next/font/google'
 import styles from './page.module.css'
+import { functionObject } from './new_object/object_function';
 
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
+
   return (
     <main className={styles.main}>
       <div className={styles.description}>
+        <button onClick={functionObject}>
+          Object
+        </button>
+        <button></button>
+        <button></button>
+        <button></button>
+        <button></button>
+        <button></button>
+        <button></button>
+        <button></button>
+        <button></button>
+        <button></button>
         <p>
           Get started by editing&nbsp;
           <code className={styles.code}>src/app/page.js</code>

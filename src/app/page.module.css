@@ -7,10 +7,23 @@
   min-height: 100vh;
 }
 
+.detector{
+  background-image: url("./page.png");
+  background-repeat: no-repeat;
+  width: 30vh;
+}
+
+.animationFrame{
+  width: 10vw;
+  height: 10vw;
+  background-color: cornflowerblue;
+}
+
 .description {
   display: flex;
-  justify-content: inherit;
-  align-items: inherit;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
   font-size: 0.85rem;
   max-width: var(--max-width);
   width: 100%;
@@ -129,6 +142,8 @@
   position: absolute;
   z-index: -1;
 }
+
+
 
 /* Conic Gradient Animation */
 .thirteen::before {

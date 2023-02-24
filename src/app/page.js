@@ -7,6 +7,11 @@ import { cycle } from './new_object/cycle';
 import { web_worker } from './new_object/web-worker/web-worker';
 import { array_buffer } from './new_object/array-buffer';
 import { clipboard_read_anything, clipboard_read_text, clipboard_write_anything, clipboard_write_text } from './new_object/clipboard';
+import { index } from './new_object/indexDB';
+import { performance } from './new_object/performance';
+import { detector } from './new_object/detector';
+import { battery } from './new_object/battery';
+import { animationFrame } from './new_object/requestAnimationFrame';
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -38,11 +43,26 @@ export default function Home() {
         <button onClick={clipboard_write_text}>
           Clipboard write text
         </button>
-        <button></button>
-        <button></button>
-        <button></button>
-        <button></button>
-        <button></button>
+        <button onClick={index}>
+          IndexDB
+        </button>
+        <button onClick={performance}>
+          Performance API
+        </button>
+        <button onClick={detector} id={"detector"}>
+          detector
+        </button>
+        <div className={styles.detector}>
+        </div>
+        <button onClick={battery}>
+          battery
+        </button>
+        <button onClick={animationFrame}>
+          requestAnimationFrame
+        </button>
+        <div className={styles.animationFrame} id='some-element-you-want-to-animate'>
+          animation
+        </div>
       </div>
     </main>
   )

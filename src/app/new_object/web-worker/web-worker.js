@@ -1,6 +1,7 @@
 import { work } from "./work";
 export const web_worker = () => {
-    const blob = new Blob(['(' + work.toString() + ')']);
+    console.log(work);
+    const blob = new Blob(['(' + work.toString() + ')()']);
     const url = window.URL.createObjectURL(blob);
     let worker = new Worker(url)
     worker.onerror = function (e) {
